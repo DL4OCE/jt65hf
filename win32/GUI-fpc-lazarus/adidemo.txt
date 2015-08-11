@@ -1,1 +1,0 @@
-<call:6>UA4LGP<band:3>15m<freq:6>21.076<gridsquare:4>LO44<mode:4>JT65<rst_rcvd:3>-13<rst_sent:3>-14<qso_date:8>20140129<time_on:4>1112<time_off:4>1112<station_callsign:6>DL4OCE<my_gridsquare:6>JO52FF<eor>
