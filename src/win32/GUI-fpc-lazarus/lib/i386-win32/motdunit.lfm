@@ -1,0 +1,29 @@
+object HTMLdisplay: THTMLdisplay
+  Left = 416
+  Height = 417
+  Top = 258
+  Width = 320
+  BorderIcons = []
+  Caption = 'Did you know?'
+  ClientHeight = 417
+  ClientWidth = 320
+  OnActivate = FormActivate
+  LCLVersion = '1.0.10.0'
+  object Memo1: TMemo
+    Left = 0
+    Height = 186
+    Top = 0
+    Width = 320
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object TIMemo1: TTIMemo
+    Left = 33
+    Height = 90
+    Top = 245
+    Width = 150
+    Lines.Strings = (
+      'TIMemo1'
+    )
+  end
+end

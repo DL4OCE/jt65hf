@@ -1,0 +1,2804 @@
+object Form6: TForm6
+  Left = 794
+  Height = 542
+  Top = 231
+  Width = 800
+  BorderIcons = []
+  Caption = 'Configuration'
+  ClientHeight = 542
+  ClientWidth = 800
+  Constraints.MaxHeight = 542
+  Constraints.MaxWidth = 800
+  Constraints.MinHeight = 542
+  Constraints.MinWidth = 800
+  Font.Height = -11
+  Font.Name = 'Arial'
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  ShowHint = True
+  LCLVersion = '1.0.10.0'
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 488
+    Top = 0
+    Width = 784
+    ActivePage = TabSheet7
+    TabIndex = 6
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'Station Setup'
+      ClientHeight = 461
+      ClientWidth = 776
+      OnContextPopup = TabSheet1ContextPopup
+      object Label26: TLabel
+        Left = 13
+        Height = 15
+        Top = 9
+        Width = 49
+        Caption = '*Callsign'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label27: TLabel
+        Left = 12
+        Height = 15
+        Top = 57
+        Width = 131
+        Caption = '*Grid (4 or 6 characters)'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label22: TLabel
+        Left = 12
+        Height = 15
+        Top = 105
+        Width = 106
+        Caption = 'Sound Input Device'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label23: TLabel
+        Left = 381
+        Height = 15
+        Top = 105
+        Width = 115
+        Caption = 'Sound Output Device'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label53: TLabel
+        Left = 13
+        Height = 15
+        Top = 153
+        Width = 78
+        Caption = 'RX Sample Rate'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label54: TLabel
+        Left = 121
+        Height = 15
+        Top = 153
+        Width = 77
+        Caption = 'TX Sample Rate'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label28: TLabel
+        Left = 100
+        Height = 15
+        Hint = 'READ THE WARNINGS!!'
+        Top = 9
+        Width = 33
+        Caption = 'Prefix'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label30: TLabel
+        Left = 200
+        Height = 15
+        Hint = 'READ THE WARNINGS!!'
+        Top = 9
+        Width = 32
+        Caption = 'Suffix'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label70: TLabel
+        Left = 284
+        Height = 64
+        Top = 9
+        Width = 473
+        AutoSize = False
+        Caption = 'Note:  Suffix/Prefix is suggested to only be used in situations where you have a legal requirement to do so.  You may define a suffix OR a prefix but not both.  Suffix/prefix support in the JT65 protocol is a (very) complex issue.  My suggestion is to avoid its use if at all possible.  Suffix/prefix support in JT65-HF is, at best, incomplete.'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+        OnClick = Label70Click
+      end
+      object edMyCall: TEdit
+        Left = 13
+        Height = 24
+        Hint = 'Callsign only WITHOUT extensions like "EA8/", "/p", ...'
+        Top = 25
+        Width = 80
+        CharCase = ecUppercase
+        Font.Height = -13
+        Font.Name = 'Arial'
+        OnChange = edMyCallChange
+        OnKeyPress = edMyCallKeyPress
+        ParentFont = False
+        TabOrder = 0
+      end
+      object edMyGrid: TEdit
+        Left = 12
+        Height = 24
+        Hint = 'Examples: JO43 or KP68HG'
+        Top = 73
+        Width = 80
+        CharCase = ecUppercase
+        Font.Height = -13
+        Font.Name = 'Arial'
+        OnKeyPress = edMyGridKeyPress
+        ParentFont = False
+        TabOrder = 3
+      end
+      object cbAudioIn: TComboBox
+        Left = 12
+        Height = 24
+        Top = 121
+        Width = 360
+        Font.Height = -13
+        Font.Name = 'Arial'
+        ItemHeight = 16
+        ItemIndex = 0
+        Items.Strings = (
+          'Default Input'
+        )
+        OnChange = cbAudioInChange
+        ParentFont = False
+        Style = csDropDownList
+        TabOrder = 4
+        Text = 'Default Input'
+      end
+      object cbAudioOut: TComboBox
+        Left = 380
+        Height = 24
+        Top = 121
+        Width = 360
+        Font.Height = -13
+        Font.Name = 'Arial'
+        ItemHeight = 16
+        ItemIndex = 0
+        Items.Strings = (
+          'Default Ouput'
+        )
+        OnChange = cbAudioOutChange
+        ParentFont = False
+        Style = csDropDownList
+        TabOrder = 5
+        Text = 'Default Ouput'
+      end
+      object edRXSRCor: TEdit
+        Left = 13
+        Height = 24
+        Hint = 'Should be close to 1.0000'
+        Top = 169
+        Width = 63
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 6
+        Text = '1.0000'
+      end
+      object edTXSRCor: TEdit
+        Left = 121
+        Height = 24
+        Hint = 'Should be close to 1.0000'
+        Top = 169
+        Width = 63
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 7
+        Text = '1.0000'
+      end
+      object chkEnableAutoSR: TCheckBox
+        Left = 212
+        Height = 19
+        Hint = 'Automatic adjustment may cause some initial skewing of spectrum display until SR settles.  This is harmless. In most cases it is suggested to enable Automatic Sample Rate Correction.'
+        Top = 169
+        Width = 285
+        Caption = 'Enable Automatic RX/TX Sample Rate Correction.'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        OnChange = chkEnableAutoSRChange
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 8
+      end
+      object cbTXWatchDog: TCheckBox
+        Left = 12
+        Height = 19
+        Hint = 'There are many reasons for activating this watchdog feature: you shouldn''t cause QRM over a long time which might be the case sometimes. You also don''t want to harm your PA with hours of transmission. '#13#10'Enabling this feature is absolutely suggested.'
+        Top = 201
+        Width = 217
+        Caption = 'Disable TX after sending same message '
+        Checked = True
+        Font.Height = -11
+        Font.Name = 'Arial'
+        ParentFont = False
+        State = cbChecked
+        TabOrder = 9
+      end
+      object comboPrefix: TComboBox
+        Left = 100
+        Height = 22
+        Top = 25
+        Width = 92
+        Font.Height = -11
+        Font.Name = 'Arial'
+        ItemHeight = 14
+        ItemIndex = 0
+        Items.Strings = (
+          'NONE'
+        )
+        OnChange = comboPrefixChange
+        ParentFont = False
+        Style = csDropDownList
+        TabOrder = 1
+        TabStop = False
+        Text = 'NONE'
+      end
+      object comboSuffix: TComboBox
+        Left = 200
+        Height = 22
+        Top = 25
+        Width = 64
+        Font.Height = -11
+        Font.Name = 'Arial'
+        ItemHeight = 14
+        ItemIndex = 0
+        Items.Strings = (
+          'NONE'
+        )
+        OnChange = comboPrefixChange
+        ParentFont = False
+        Style = csDropDownList
+        TabOrder = 2
+        TabStop = False
+        Text = 'NONE'
+      end
+      object SpinTXCount: TSpinEdit
+        Left = 236
+        Height = 22
+        Hint = '5 times would be a good choice'
+        Top = 201
+        Width = 50
+        MaxValue = 30
+        MinValue = 2
+        OnChange = SpinTXCountChange
+        OnKeyDown = SpinTXCountKeyDown
+        TabOrder = 10
+        Value = 5
+      end
+      object Label1: TLabel
+        Left = 292
+        Height = 15
+        Top = 205
+        Width = 29
+        Caption = 'times.'
+        ParentColor = False
+      end
+      object Label4: TLabel
+        Left = 13
+        Height = 15
+        Top = 433
+        Width = 55
+        Caption = '*) Required'
+        ParentColor = False
+      end
+      object cbAutoScrollRX: TCheckBox
+        Left = 12
+        Height = 19
+        Hint = 'Sometimes you scroll down the RX windows to see what happened in the past. But don''t miss new decodes and check this box!'
+        Top = 225
+        Width = 198
+        Caption = 'Auto-scroll RX window after decode'
+        TabOrder = 11
+      end
+      object GroupBox3: TGroupBox
+        Left = 12
+        Height = 65
+        Top = 249
+        Width = 745
+        Caption = 'Multi-Decoder'
+        ClientHeight = 47
+        ClientWidth = 741
+        TabOrder = 12
+        object cbDisableMultiQSO: TCheckBox
+          Left = 6
+          Height = 19
+          Hint = 'Use this option to switch to single decoder mode while in QSO although the multi-decode checkbox in the main window is checked.'
+          Top = 0
+          Width = 369
+          Caption = 'Disable while in QSO. Suggested unless you have a fast CPU (>1.5GHz)'
+          Checked = True
+          Font.Height = -11
+          Font.Name = 'Arial'
+          OnChange = cbDisableMultiQSOChange
+          ParentFont = False
+          State = cbChecked
+          TabOrder = 0
+        end
+        object cbMultiAutoEnable: TCheckBox
+          Left = 6
+          Height = 19
+          Hint = 'Return to multi-decode mode after 2 minutes of no transmission. This will prevent you from not decoding anything after finishing a QSO.'
+          Top = 16
+          Width = 317
+          Caption = 'Enabled after 2 minutes of no TX (If disabled by option above)'
+          Checked = True
+          State = cbChecked
+          TabOrder = 1
+        end
+        object cbRestoreMulti: TCheckBox
+          Left = 398
+          Height = 19
+          Hint = 'Return to multi-decode mode when ''defaults'' button is pressed'
+          Top = 0
+          Width = 164
+          Caption = 'Enabled by pressing ''defaults'''
+          Checked = True
+          State = cbChecked
+          TabOrder = 2
+        end
+        object cbMultiAutoEnableHTX: TCheckBox
+          Left = 398
+          Height = 19
+          Hint = 'Return to multi-decode mode if manually disabled TX by pressing button or <ESC>'
+          Top = 16
+          Width = 142
+          Caption = 'Enabled by pressing ''halt'''
+          Checked = True
+          State = cbChecked
+          TabOrder = 3
+        end
+      end
+      object GroupBox4: TGroupBox
+        Left = 12
+        Height = 42
+        Top = 321
+        Width = 743
+        Caption = 'CW ID'
+        ClientHeight = 24
+        ClientWidth = 739
+        TabOrder = 13
+        object cbCWID: TCheckBox
+          Left = 3
+          Height = 19
+          Top = 0
+          Width = 225
+          Caption = 'Send CW ID With 73 or Free Text Message'
+          OnChange = cbCWIDChange
+          TabOrder = 0
+        end
+        object cbCWIDFT: TCheckBox
+          Left = 395
+          Height = 19
+          Top = 0
+          Width = 229
+          Caption = 'Send CW ID ONLY with Free Text Message'
+          OnChange = cbCWIDFTChange
+          TabOrder = 1
+        end
+      end
+      object GroupBox5: TGroupBox
+        Left = 12
+        Height = 40
+        Top = 377
+        Width = 744
+        Caption = 'Divider line in RX window'
+        ClientHeight = 22
+        ClientWidth = 740
+        TabOrder = 14
+        object cbDecodeDivider: TCheckBox
+          Left = 3
+          Height = 19
+          Hint = 'For better overview'
+          Top = 0
+          Width = 329
+          Caption = 'Draw between text decode periods if screen height is sufficient'
+          Checked = True
+          State = cbChecked
+          TabOrder = 0
+        end
+        object cbDecodeDividerCompact: TCheckBox
+          Left = 395
+          Height = 19
+          Hint = 'Remove previously inserted divider lines'
+          Top = 0
+          Width = 127
+          Caption = 'Only for latest decode'
+          Checked = True
+          OnChange = cbDecodeDividerCompactChange
+          State = cbChecked
+          TabOrder = 1
+        end
+      end
+      object cbShowWatchdogDiagout: TCheckBox
+        Left = 412
+        Height = 19
+        Top = 201
+        Width = 185
+        Caption = 'Show diagnosis output after times'
+        OnChange = cbShowWatchdogDiagoutChange
+        TabOrder = 15
+      end
+    end
+    object TabSheet5: TTabSheet
+      Caption = 'Log Setup'
+      ClientHeight = 461
+      ClientWidth = 776
+      object cbWipLg: TCheckBox
+        Left = 435
+        Height = 19
+        Hint = 'Highlight background'
+        Top = 35
+        Width = 123
+        Caption = 'Background coloured'
+        Checked = True
+        Font.Height = -11
+        Font.Name = 'Arial'
+        OnChange = cbWipLgChange
+        ParentFont = False
+        State = cbChecked
+        TabOrder = 0
+      end
+      object cbWipTc: TCheckBox
+        Left = 435
+        Height = 19
+        Hint = 'Highlight by changing the colour of the letters'
+        Top = 84
+        Width = 99
+        Caption = 'Letters coloured'
+        Checked = True
+        Font.Height = -11
+        Font.Name = 'Arial'
+        OnChange = cbWipTcChange
+        ParentFont = False
+        State = cbChecked
+        TabOrder = 17
+      end
+      object cbToAtLog: TCheckBox
+        Left = 396
+        Height = 19
+        Hint = 'Halt TX when ''log'' button pressed'
+        Top = 300
+        Width = 112
+        Caption = 'Log QSO = TX OFF'
+        Checked = True
+        State = cbChecked
+        TabOrder = 13
+      end
+      object Edit5: TEdit
+        Left = 20
+        Height = 24
+        Top = 20
+        Width = 192
+        Alignment = taCenter
+        CharCase = ecUppercase
+        Color = clRed
+        Font.Height = -13
+        Font.Name = 'Courier New'
+        Font.Style = [fsBold]
+        ParentFont = False
+        ReadOnly = True
+        TabStop = False
+        TabOrder = 18
+        Text = 'QSO BEFORE'
+      end
+      object ComboBox4: TComboBox
+        Left = 220
+        Height = 24
+        Top = 20
+        Width = 137
+        Color = clRed
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ItemHeight = 16
+        ItemIndex = 7
+        Items.Strings = (
+          'Green'
+          'Olive'
+          'Sky Blue'
+          'Purple'
+          'Teal'
+          'Gray'
+          'Silver'
+          'Red'
+          'Lime'
+          'Yellow'
+          'Light Green'
+          'Fuchsia'
+          'Aqua'
+          'Cream'
+          'Medium Gray'
+          'White'
+        )
+        OnChange = ComboBox4Change
+        ParentFont = False
+        Style = csDropDownList
+        TabOrder = 1
+        Text = 'Red'
+      end
+      object Edit6: TEdit
+        Left = 20
+        Height = 24
+        Top = 48
+        Width = 191
+        Alignment = taCenter
+        CharCase = ecUppercase
+        Color = clWhite
+        Font.Height = -13
+        Font.Name = 'Courier New'
+        Font.Style = [fsBold]
+        ParentFont = False
+        ReadOnly = True
+        TabStop = False
+        TabOrder = 19
+        Text = 'CALL IN LOG'
+      end
+      object ComboBox5: TComboBox
+        Left = 220
+        Height = 24
+        Top = 48
+        Width = 137
+        Color = clWhite
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ItemHeight = 16
+        ItemIndex = 15
+        Items.Strings = (
+          'Green'
+          'Olive'
+          'Sky Blue'
+          'Purple'
+          'Teal'
+          'Gray'
+          'Silver'
+          'Red'
+          'Lime'
+          'Yellow'
+          'Light Green'
+          'Fuchsia'
+          'Aqua'
+          'Cream'
+          'Medium Gray'
+          'White'
+        )
+        OnChange = ComboBox5Change
+        ParentFont = False
+        Style = csDropDownList
+        TabOrder = 2
+        Text = 'White'
+      end
+      object DirectoryEdit1: TDirectoryEdit
+        Left = 20
+        Height = 24
+        Hint = 'Folder where complete RX decodes and TX data will be saved.'#13#10'Additionally, you can save a transmission log file.'#13#10'This is both completely optional.'
+        Top = 353
+        Width = 720
+        ShowHidden = False
+        ButtonWidth = 23
+        NumGlyphs = 0
+        Font.Height = -13
+        Font.Name = 'Arial'
+        MaxLength = 0
+        ParentFont = False
+        TabOrder = 16
+      end
+      object Label29: TLabel
+        Left = 20
+        Height = 15
+        Top = 337
+        Width = 228
+        Caption = 'Location of RX/TX history file and Transmit-Log'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        ParentColor = False
+        ParentFont = False
+      end
+      object FileListbox1: TFileNameEdit
+        Left = 20
+        Height = 24
+        Hint = 'Use .adi for ADI output, .log for MixW output.'#13#10'You''ll need a log file, because Comfort needs to store your QSOs somewhere to find out if you''ve already had a QSO with a certain station!!'
+        Top = 297
+        Width = 344
+        DialogOptions = []
+        FilterIndex = 0
+        HideDirectories = False
+        ButtonWidth = 23
+        NumGlyphs = 0
+        Font.Height = -13
+        Font.Name = 'Arial'
+        MaxLength = 0
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 12
+        OnChange = FileListbox1Change
+      end
+      object Label31: TLabel
+        Left = 20
+        Height = 15
+        Top = 281
+        Width = 224
+        Caption = '*Logfile  (Path and Filename + extension)'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object cbSaveCSV: TCheckBox
+        Left = 20
+        Height = 19
+        Hint = 'Save full RX/TX data to file.'
+        Top = 385
+        Width = 327
+        Caption = 'Save text of decodes and transmissions to file (JT65hf-log.csv)'
+        Checked = True
+        State = cbChecked
+        TabOrder = 14
+      end
+      object Label38: TLabel
+        Left = 435
+        Height = 15
+        Top = 20
+        Width = 100
+        Caption = 'When highlighted:'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object ComboBox6: TComboBox
+        Left = 220
+        Height = 24
+        Top = 76
+        Width = 137
+        Color = clFuchsia
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ItemHeight = 16
+        ItemIndex = 11
+        Items.Strings = (
+          'Green'
+          'Olive'
+          'Sky Blue'
+          'Purple'
+          'Teal'
+          'Gray'
+          'Silver'
+          'Red'
+          'Lime'
+          'Yellow'
+          'Light Green'
+          'Fuchsia'
+          'Aqua'
+          'Cream'
+          'Medium Gray'
+          'White'
+        )
+        OnChange = ComboBox6Change
+        ParentFont = False
+        Style = csDropDownList
+        TabOrder = 3
+        Text = 'Fuchsia'
+      end
+      object Edit7: TEdit
+        Left = 20
+        Height = 24
+        Top = 76
+        Width = 192
+        Alignment = taCenter
+        CharCase = ecUppercase
+        Color = clFuchsia
+        Font.Height = -13
+        Font.Name = 'Courier New'
+        Font.Style = [fsBold]
+        ParentFont = False
+        ReadOnly = True
+        TabStop = False
+        TabOrder = 20
+        Text = 'CALL CFM CURRENT BAND'
+      end
+      object ComboBox7: TComboBox
+        Left = 220
+        Height = 24
+        Top = 102
+        Width = 137
+        Color = clYellow
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ItemHeight = 16
+        ItemIndex = 9
+        Items.Strings = (
+          'Green'
+          'Olive'
+          'Sky Blue'
+          'Purple'
+          'Teal'
+          'Gray'
+          'Silver'
+          'Red'
+          'Lime'
+          'Yellow'
+          'Light Green'
+          'Fuchsia'
+          'Aqua'
+          'Cream'
+          'Medium Gray'
+          'White'
+        )
+        OnChange = ComboBox7Change
+        ParentFont = False
+        Style = csDropDownList
+        TabOrder = 4
+        Text = 'Yellow'
+      end
+      object Edit8: TEdit
+        Left = 20
+        Height = 24
+        Top = 102
+        Width = 193
+        Alignment = taCenter
+        CharCase = ecUppercase
+        Color = clYellow
+        Font.Height = -13
+        Font.Name = 'Courier New'
+        Font.Style = [fsBold]
+        ParentFont = False
+        ReadOnly = True
+        TabStop = False
+        TabOrder = 21
+        Text = 'CALL CFM ANOTHER BAND'
+      end
+      object cbBookmark: TCheckBox
+        Left = 435
+        Height = 19
+        Hint = 'Show bookmark line at the top of the waterfall'
+        Top = 68
+        Width = 104
+        Caption = 'Show bookmarks'
+        Checked = True
+        State = cbChecked
+        TabOrder = 22
+      end
+      object cbSaveTxLog: TCheckBox
+        Left = 396
+        Height = 19
+        Hint = 'Save transmit log only'
+        Top = 385
+        Width = 233
+        Caption = 'Save transmit log to file (JT65HF-TX-Log.txt)'
+        Checked = True
+        State = cbChecked
+        TabOrder = 15
+      end
+      object ComboBox8: TComboBox
+        Left = 220
+        Height = 24
+        Top = 128
+        Width = 137
+        Color = clMoneyGreen
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ItemHeight = 16
+        ItemIndex = 10
+        Items.Strings = (
+          'Green'
+          'Olive'
+          'Sky Blue'
+          'Purple'
+          'Teal'
+          'Gray'
+          'Silver'
+          'Red'
+          'Lime'
+          'Yellow'
+          'Light Green'
+          'Fuchsia'
+          'Aqua'
+          'Cream'
+          'Medium Gray'
+          'White'
+        )
+        OnChange = ComboBox8Change
+        ParentFont = False
+        Style = csDropDownList
+        TabOrder = 5
+        Text = 'Light Green'
+      end
+      object Edit9: TEdit
+        Left = 20
+        Height = 24
+        Top = 128
+        Width = 192
+        Alignment = taCenter
+        CharCase = ecUppercase
+        Color = clMoneyGreen
+        Font.Height = -13
+        Font.Name = 'Courier New'
+        Font.Style = [fsBold]
+        ParentFont = False
+        ReadOnly = True
+        TabStop = False
+        TabOrder = 23
+        Text = 'BACKGROUND BOOKMARKS'
+      end
+      object cbNwhmC: TCheckBox
+        Left = 434
+        Height = 19
+        Hint = 'Override colouring if transmission contains my callsign '
+        Top = 52
+        Width = 262
+        Caption = 'No highlighting if transmission contains my callsign'
+        Checked = True
+        Font.Height = -11
+        Font.Name = 'Arial'
+        ParentFont = False
+        State = cbChecked
+        TabOrder = 24
+      end
+      object Label5: TLabel
+        Left = 20
+        Height = 15
+        Top = 433
+        Width = 55
+        Caption = '*) Required'
+        ParentColor = False
+      end
+      object cbLogHRD: TCheckBox
+        Left = 20
+        Height = 19
+        Hint = 'Enable logging to a MySQL server database containing an HRD logbook of version 5'
+        Top = 201
+        Width = 144
+        Caption = 'Log to HRD (mySQL v5.5)'
+        OnChange = cbLogHRDChange
+        TabOrder = 6
+      end
+      object MySQLpassword: TEdit
+        Left = 524
+        Height = 22
+        Hint = 'Password for that user'
+        Top = 241
+        Width = 160
+        EchoMode = emPassword
+        PasswordChar = '*'
+        TabOrder = 10
+      end
+      object Label41: TLabel
+        Left = 524
+        Height = 15
+        Top = 225
+        Width = 57
+        Caption = 'Password'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object MySQLhostname: TEdit
+        Left = 20
+        Height = 22
+        Hint = 'Hostname or IP address of MySQL database host'
+        Top = 241
+        Width = 160
+        TabOrder = 7
+      end
+      object Label44: TLabel
+        Left = 20
+        Height = 15
+        Top = 225
+        Width = 57
+        Caption = 'Hostname'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object MySQLusername: TEdit
+        Left = 356
+        Height = 22
+        Hint = 'User name of user that has access to the HRD database'
+        Top = 241
+        Width = 160
+        TabOrder = 9
+      end
+      object Label45: TLabel
+        Left = 356
+        Height = 15
+        Top = 225
+        Width = 61
+        Caption = 'User name'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object MySQLdatabase: TEdit
+        Left = 188
+        Height = 22
+        Hint = 'Exact database name (case-sensitive)'
+        Top = 241
+        Width = 160
+        TabOrder = 8
+      end
+      object Label73: TLabel
+        Left = 188
+        Height = 15
+        Top = 225
+        Width = 51
+        Caption = 'Database'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object btnTestMySQL: TButton
+        Left = 692
+        Height = 25
+        Hint = 'Test connection. Logging will not work until successfully checked!'
+        Top = 238
+        Width = 72
+        Caption = '&Test'
+        OnClick = btnTestMySQLClick
+        TabOrder = 11
+      end
+      object textlogerrror: TLabel
+        Left = 24
+        Height = 1
+        Top = 324
+        Width = 1
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clRed
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Rig Control/PTT'
+      ClientHeight = 461
+      ClientWidth = 776
+      object Label9: TLabel
+        Left = 20
+        Height = 17
+        Top = 169
+        Width = 559
+        Caption = 'Enter your PTT port into the input box below in the format COM###, for example, COM11'
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+        Visible = False
+      end
+      object Label10: TLabel
+        Left = 10
+        Height = 15
+        Top = 17
+        Width = 48
+        Caption = 'PTT Port'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object editUserDefinedPort1: TEdit
+        Left = 10
+        Height = 22
+        Hint = 'Enter your PTT port into the input box below in the format COM###, for example, COM11'
+        Top = 33
+        Width = 90
+        CharCase = ecUppercase
+        TabOrder = 0
+        Text = 'NONE'
+      end
+      object buttonTestPTT: TButton
+        Left = 113
+        Height = 24
+        Hint = 'Key and then unkey your TRX for 500 ms. No audio will be sent during test.'
+        Top = 31
+        Width = 75
+        Caption = 'Test PTT'
+        OnClick = buttonTestPTTClick
+        TabOrder = 1
+      end
+      object Label3: TLabel
+        Left = 20
+        Height = 15
+        Top = 185
+        Width = 367
+        Caption = 'Test PTT will Key/Unkey your Transceiver.  No audio will be sent during test.'
+        ParentColor = False
+        Visible = False
+      end
+      object cbUseAltPTT: TCheckBox
+        Left = 204
+        Height = 19
+        Top = 33
+        Width = 383
+        Caption = 'Use Alternate PTT Method.  Only enable this if you have problems with PTT.'
+        TabOrder = 2
+      end
+      object RadioGroup1: TRadioGroup
+        Left = 10
+        Height = 53
+        Top = 65
+        Width = 386
+        AutoFill = True
+        Caption = 'Ham Radio Deluxe'
+        ChildSizing.LeftRightSpacing = 6
+        ChildSizing.TopBottomSpacing = 6
+        ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+        ChildSizing.EnlargeVertical = crsHomogenousChildResize
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 3
+        ClientHeight = 35
+        ClientWidth = 382
+        Columns = 3
+        TabOrder = 3
+        object chkUseHRD: TCheckBox
+          Left = 6
+          Height = 23
+          Hint = 'Enable CAT via HRD'
+          Top = 6
+          Width = 114
+          Caption = 'Enable'
+          OnChange = chkUseHRDChange
+          TabOrder = 0
+        end
+        object rbHRD4: TRadioButton
+          Left = 120
+          Height = 23
+          Hint = 'Use protocol HRD 4'
+          Top = 6
+          Width = 129
+          Caption = 'Version 4'
+          TabOrder = 1
+        end
+        object rbHRD5: TRadioButton
+          Left = 249
+          Height = 23
+          Hint = 'Use protocol HRD 5'
+          Top = 6
+          Width = 127
+          Caption = 'Version 5'
+          Checked = True
+          TabOrder = 2
+          TabStop = True
+        end
+      end
+      object OmniGroup: TRadioGroup
+        Left = 404
+        Height = 53
+        Top = 65
+        Width = 219
+        AutoFill = True
+        Caption = 'OmniRig'
+        ChildSizing.LeftRightSpacing = 6
+        ChildSizing.TopBottomSpacing = 6
+        ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+        ChildSizing.EnlargeVertical = crsHomogenousChildResize
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 3
+        ClientHeight = 35
+        ClientWidth = 215
+        Columns = 3
+        TabOrder = 4
+        object chkUseOmni: TCheckBox
+          Left = 6
+          Height = 23
+          Hint = 'Enable CAT via OmniRig'
+          Top = 6
+          Width = 65
+          Caption = 'Enable'
+          OnChange = chkUseOmniChange
+          TabOrder = 0
+        end
+        object radioOmni1: TRadioButton
+          Left = 71
+          Height = 23
+          Top = 6
+          Width = 69
+          Caption = 'Radio 1'
+          Checked = True
+          TabOrder = 1
+          TabStop = True
+        end
+        object radioOmni2: TRadioButton
+          Left = 140
+          Height = 23
+          Top = 6
+          Width = 69
+          Caption = 'Radio 2'
+          TabOrder = 2
+        end
+      end
+      object RadioGroup2: TRadioGroup
+        Left = 628
+        Height = 53
+        Top = 65
+        Width = 134
+        AutoFill = True
+        Caption = 'Commander'
+        ChildSizing.LeftRightSpacing = 6
+        ChildSizing.TopBottomSpacing = 6
+        ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+        ChildSizing.EnlargeVertical = crsHomogenousChildResize
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 3
+        ClientHeight = 35
+        ClientWidth = 130
+        Columns = 3
+        TabOrder = 5
+        object chkUseCommander: TCheckBox
+          Left = 6
+          Height = 23
+          Top = 6
+          Width = 118
+          Caption = 'Enable'
+          OnChange = chkUseCommanderChange
+          TabOrder = 0
+        end
+      end
+      object groupHRD: TGroupBox
+        Left = 10
+        Height = 202
+        Top = 232
+        Width = 754
+        Caption = 'HRD Details'
+        ClientHeight = 184
+        ClientWidth = 750
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 6
+        Visible = False
+        object Label16: TLabel
+          Left = 368
+          Height = 17
+          Top = 11
+          Width = 75
+          Caption = 'Rig QRG Hz'
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label21: TLabel
+          Left = 30
+          Height = 17
+          Top = 8
+          Width = 80
+          Caption = 'At UTC Time'
+          ParentColor = False
+        end
+        object Label32: TLabel
+          Left = 142
+          Height = 17
+          Top = 8
+          Width = 77
+          Caption = 'QSY to QRG'
+          ParentColor = False
+        end
+        object Label66: TLabel
+          Left = 245
+          Height = 17
+          Top = 8
+          Width = 89
+          Caption = 'Tune Antenna'
+          ParentColor = False
+        end
+        object Label68: TLabel
+          Left = 368
+          Height = 17
+          Top = 110
+          Width = 128
+          Caption = 'HRD Server Address'
+          ParentColor = False
+        end
+        object Label69: TLabel
+          Left = 647
+          Height = 17
+          Top = 110
+          Width = 27
+          Caption = 'Port'
+          ParentColor = False
+        end
+        object Edit4: TEdit
+          Left = 448
+          Height = 24
+          Top = 8
+          Width = 80
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 0
+          Text = '14076000'
+        end
+        object setHRDQRG: TButton
+          Left = 536
+          Height = 24
+          Top = 8
+          Width = 100
+          Caption = 'Set QRG'
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          OnClick = setHRDQRGClick
+          ParentFont = False
+          TabOrder = 1
+        end
+        object chkTxDFVFO: TCheckBox
+          Left = 368
+          Height = 20
+          Top = 75
+          Width = 330
+          Caption = 'Shift QRG to match DF if TxDF matching enabled'
+          TabOrder = 2
+        end
+        object chkHRDPTT: TCheckBox
+          Left = 369
+          Height = 20
+          Top = 43
+          Width = 124
+          Caption = 'Use HRD for PTT'
+          TabOrder = 3
+        end
+        object qsyHour1: TSpinEdit
+          Left = 30
+          Height = 24
+          Top = 28
+          Width = 50
+          Font.Height = -13
+          Font.Name = 'Arial'
+          MaxValue = 23
+          ParentFont = False
+          TabOrder = 4
+        end
+        object qsyMinute1: TSpinEdit
+          Left = 79
+          Height = 24
+          Top = 28
+          Width = 50
+          Font.Height = -13
+          Font.Name = 'Arial'
+          MaxValue = 59
+          ParentFont = False
+          TabOrder = 5
+        end
+        object edQRGQSY1: TEdit
+          Left = 142
+          Height = 24
+          Top = 28
+          Width = 128
+          TabOrder = 6
+        end
+        object cbEnableQSY1: TCheckBox
+          Left = 6
+          Height = 19
+          Top = 30
+          Width = 20
+          TabOrder = 7
+        end
+        object qsyHour2: TSpinEdit
+          Left = 30
+          Height = 24
+          Top = 59
+          Width = 50
+          Font.Height = -13
+          Font.Name = 'Arial'
+          MaxValue = 23
+          ParentFont = False
+          TabOrder = 8
+        end
+        object qsyMinute2: TSpinEdit
+          Left = 79
+          Height = 24
+          Top = 59
+          Width = 50
+          Font.Height = -13
+          Font.Name = 'Arial'
+          MaxValue = 59
+          ParentFont = False
+          TabOrder = 9
+        end
+        object edQRGQSY2: TEdit
+          Left = 142
+          Height = 24
+          Top = 59
+          Width = 128
+          TabOrder = 10
+        end
+        object cbEnableQSY2: TCheckBox
+          Left = 6
+          Height = 19
+          Top = 62
+          Width = 20
+          TabOrder = 11
+        end
+        object qsyHour3: TSpinEdit
+          Left = 30
+          Height = 24
+          Top = 88
+          Width = 50
+          Font.Height = -13
+          Font.Name = 'Arial'
+          MaxValue = 23
+          ParentFont = False
+          TabOrder = 12
+        end
+        object qsyMinute3: TSpinEdit
+          Left = 79
+          Height = 24
+          Top = 87
+          Width = 50
+          Font.Height = -13
+          Font.Name = 'Arial'
+          MaxValue = 59
+          ParentFont = False
+          TabOrder = 13
+        end
+        object edQRGQSY3: TEdit
+          Left = 142
+          Height = 24
+          Top = 88
+          Width = 128
+          TabOrder = 14
+        end
+        object cbEnableQSY3: TCheckBox
+          Left = 6
+          Height = 19
+          Top = 91
+          Width = 20
+          TabOrder = 15
+        end
+        object qsyHour4: TSpinEdit
+          Left = 30
+          Height = 24
+          Top = 118
+          Width = 50
+          Font.Height = -13
+          Font.Name = 'Arial'
+          MaxValue = 23
+          ParentFont = False
+          TabOrder = 16
+        end
+        object qsyMinute4: TSpinEdit
+          Left = 79
+          Height = 24
+          Top = 118
+          Width = 50
+          Font.Height = -13
+          Font.Name = 'Arial'
+          MaxValue = 59
+          ParentFont = False
+          TabOrder = 17
+        end
+        object edQRGQSY4: TEdit
+          Left = 142
+          Height = 24
+          Top = 117
+          Width = 128
+          TabOrder = 18
+        end
+        object cbEnableQSY4: TCheckBox
+          Left = 6
+          Height = 19
+          Top = 119
+          Width = 20
+          TabOrder = 19
+        end
+        object qsyHour5: TSpinEdit
+          Left = 30
+          Height = 24
+          Top = 148
+          Width = 50
+          Font.Height = -13
+          Font.Name = 'Arial'
+          MaxValue = 23
+          ParentFont = False
+          TabOrder = 20
+        end
+        object qsyMinute5: TSpinEdit
+          Left = 79
+          Height = 24
+          Top = 148
+          Width = 50
+          Font.Height = -13
+          Font.Name = 'Arial'
+          MaxValue = 59
+          ParentFont = False
+          TabOrder = 21
+        end
+        object edQRGQSY5: TEdit
+          Left = 142
+          Height = 24
+          Top = 148
+          Width = 128
+          TabOrder = 22
+        end
+        object cbEnableQSY5: TCheckBox
+          Left = 6
+          Height = 19
+          Top = 150
+          Width = 20
+          TabOrder = 23
+        end
+        object cbATQSY1: TCheckBox
+          Left = 278
+          Height = 19
+          Top = 30
+          Width = 20
+          TabOrder = 24
+        end
+        object cbATQSY2: TCheckBox
+          Left = 278
+          Height = 19
+          Top = 62
+          Width = 20
+          TabOrder = 25
+        end
+        object cbATQSY3: TCheckBox
+          Left = 278
+          Height = 19
+          Top = 91
+          Width = 20
+          TabOrder = 26
+        end
+        object cbATQSY4: TCheckBox
+          Left = 278
+          Height = 19
+          Top = 119
+          Width = 20
+          TabOrder = 27
+        end
+        object cbATQSY5: TCheckBox
+          Left = 278
+          Height = 19
+          Top = 150
+          Width = 20
+          TabOrder = 28
+        end
+        object testHRDPTT: TButton
+          Left = 537
+          Height = 25
+          Hint = 'Test PTT for 500 ms'
+          Top = 40
+          Width = 101
+          Caption = 'Test HRD PTT'
+          OnClick = testHRDPTTClick
+          TabOrder = 29
+        end
+        object hrdAddress: TEdit
+          Left = 502
+          Height = 24
+          Hint = 'This should almost always be localhost'
+          Top = 108
+          Width = 134
+          OnChange = hrdAddressChange
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 30
+          Text = 'localhost'
+        end
+        object hrdPort: TEdit
+          Left = 679
+          Height = 24
+          Hint = 'Usually 7809'
+          Top = 108
+          Width = 48
+          OnChange = hrdPortChange
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 31
+          Text = '7809'
+        end
+      end
+      object rigQRG: TEdit
+        Left = 684
+        Height = 22
+        Top = 8
+        Width = 80
+        ReadOnly = True
+        TabOrder = 7
+        Text = '0'
+        Visible = False
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'RB and PSKR'
+      ClientHeight = 461
+      ClientWidth = 776
+      object Label34: TLabel
+        Left = 4
+        Height = 15
+        Top = 17
+        Width = 487
+        Caption = '[Optional] Call for PSK Reporter or RB.  Suffixed/Prefixed is allowed.  DO NOT add -1 -2 etc.'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object editPSKRCall: TEdit
+        Left = 4
+        Height = 24
+        Top = 33
+        Width = 112
+        CharCase = ecUppercase
+        Font.Height = -13
+        Font.Name = 'Arial'
+        ParentFont = False
+        TabOrder = 0
+      end
+      object Label33: TLabel
+        Left = 4
+        Height = 15
+        Top = 73
+        Width = 266
+        Caption = '[Optional] Antenna description for PSK Reporter.'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object editPSKRAntenna: TEdit
+        Left = 4
+        Height = 24
+        Top = 89
+        Width = 470
+        Font.Height = -13
+        Font.Name = 'Arial'
+        ParentFont = False
+        TabOrder = 1
+      end
+      object cbNotifyByUSB: TCheckBox
+        Left = 8
+        Height = 19
+        Top = 129
+        Width = 143
+        Caption = 'notify by USB mail notifier'
+        Color = clInactiveCaption
+        Enabled = False
+        ParentColor = False
+        TabOrder = 2
+        Visible = False
+      end
+    end
+    object TabSheet4: TTabSheet
+      Caption = 'Macros'
+      ClientHeight = 461
+      ClientWidth = 776
+      object Label2: TLabel
+        Left = 12
+        Height = 17
+        Top = 9
+        Width = 105
+        Caption = 'QRG Definitions.'
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label35: TLabel
+        Left = 11
+        Height = 15
+        Top = 33
+        Width = 64
+        Caption = '1 - 1838 KHz'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label36: TLabel
+        Left = 11
+        Height = 15
+        Top = 61
+        Width = 64
+        Caption = '2 - 3586 KHz'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label37: TLabel
+        Left = 12
+        Height = 15
+        Top = 89
+        Width = 64
+        Caption = '3 - 7039 KHz'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label39: TLabel
+        Left = 11
+        Height = 15
+        Top = 121
+        Width = 64
+        Caption = '4 - 7076 KHz'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label42: TLabel
+        Left = 133
+        Height = 15
+        Top = 33
+        Width = 19
+        Caption = '11 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label43: TLabel
+        Left = 12
+        Height = 15
+        Top = 153
+        Width = 70
+        Caption = '5 - 10139 KHz'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label46: TLabel
+        Left = 12
+        Height = 15
+        Top = 181
+        Width = 70
+        Caption = '6 - 14076 KHz'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label47: TLabel
+        Left = 132
+        Height = 15
+        Top = 61
+        Width = 20
+        Caption = '12 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label48: TLabel
+        Left = 11
+        Height = 15
+        Top = 212
+        Width = 70
+        Caption = '7 - 18102 KHz'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label49: TLabel
+        Left = 132
+        Height = 15
+        Top = 89
+        Width = 20
+        Caption = '13 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label50: TLabel
+        Left = 132
+        Height = 15
+        Top = 121
+        Width = 20
+        Caption = '14 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label51: TLabel
+        Left = 132
+        Height = 15
+        Top = 153
+        Width = 20
+        Caption = '15 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label52: TLabel
+        Left = 132
+        Height = 15
+        Top = 181
+        Width = 20
+        Caption = '16 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label55: TLabel
+        Left = 365
+        Height = 17
+        Top = 13
+        Width = 127
+        Caption = 'Message Definitions'
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label56: TLabel
+        Left = 365
+        Height = 15
+        Top = 37
+        Width = 95
+        Caption = '1 - Short Hand RO'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label57: TLabel
+        Left = 365
+        Height = 15
+        Top = 61
+        Width = 101
+        Caption = '2 - Short Hand RRR'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label58: TLabel
+        Left = 365
+        Height = 15
+        Top = 85
+        Width = 92
+        Caption = '3 - Short Hand 73'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label59: TLabel
+        Left = 365
+        Height = 15
+        Top = 109
+        Width = 14
+        Caption = '4 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label60: TLabel
+        Left = 365
+        Height = 15
+        Top = 142
+        Width = 14
+        Caption = '5 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label61: TLabel
+        Left = 365
+        Height = 15
+        Top = 175
+        Width = 14
+        Caption = '6 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label62: TLabel
+        Left = 365
+        Height = 15
+        Top = 209
+        Width = 14
+        Caption = '7 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label63: TLabel
+        Left = 365
+        Height = 15
+        Top = 242
+        Width = 14
+        Caption = '8 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label64: TLabel
+        Left = 365
+        Height = 15
+        Top = 275
+        Width = 14
+        Caption = '9 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label122: TLabel
+        Left = 358
+        Height = 15
+        Top = 308
+        Width = 20
+        Caption = '10 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label123: TLabel
+        Left = 565
+        Height = 15
+        Top = 33
+        Width = 19
+        Caption = '11 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label124: TLabel
+        Left = 564
+        Height = 15
+        Top = 61
+        Width = 20
+        Caption = '12 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label125: TLabel
+        Left = 564
+        Height = 15
+        Top = 85
+        Width = 20
+        Caption = '13 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label20: TLabel
+        Left = 358
+        Height = 57
+        Top = 337
+        Width = 160
+        Caption = 'JT65 Character Set: ONLY USE'#13#10#13#10'0123456789ABCDEFGHIJKLMNO'#13#10'PQRSTUVWXYZ +-./?'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label71: TLabel
+        Left = 564
+        Height = 71
+        Top = 334
+        Width = 167
+        Caption = 'Do not begin a free text message'#13#10'with RRR, RO or 73 as it will be'#13#10'sent as shorthand even if you add'#13#10'text to the first ''word'' (RRR, RO,'#13#10'73).'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label72: TLabel
+        Left = 11
+        Height = 99
+        Top = 337
+        Width = 224
+        Caption = 'Commonly used JT65 dial QRG values have '#13#10'been predefined.You may define up to 10 '#13#10'custom values.  These will be usable when '#13#10'setting QRG from the main program screen '#13#10'by right clicking on the QRG entry box.'#13#10'This will only work when either not connected'#13#10'to any device or when connected to HRD.'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        ParentColor = False
+        ParentFont = False
+      end
+      object edUserQRG1: TEdit
+        Left = 171
+        Height = 22
+        Top = 33
+        Width = 64
+        OnKeyPress = edUserQRG13KeyPress
+        TabOrder = 0
+        Text = '24917'
+      end
+      object edUserQRG2: TEdit
+        Left = 171
+        Height = 22
+        Top = 61
+        Width = 64
+        OnKeyPress = edUserQRG13KeyPress
+        TabOrder = 1
+        Text = '18098'
+      end
+      object edUserQRG3: TEdit
+        Left = 171
+        Height = 22
+        Top = 89
+        Width = 64
+        OnKeyPress = edUserQRG13KeyPress
+        TabOrder = 2
+        Text = '14075'
+      end
+      object edUserQRG4: TEdit
+        Left = 171
+        Height = 22
+        Top = 121
+        Width = 64
+        OnKeyPress = edUserQRG13KeyPress
+        TabOrder = 3
+        Text = '10138'
+      end
+      object edUserMsg4: TEdit
+        Left = 385
+        Height = 22
+        Top = 107
+        Width = 144
+        CharCase = ecUppercase
+        MaxLength = 13
+        OnChange = edUserMsgChange
+        OnKeyPress = edUserMsg4KeyPress
+        TabOrder = 10
+      end
+      object edUserMsg5: TEdit
+        Left = 386
+        Height = 22
+        Top = 140
+        Width = 144
+        CharCase = ecUppercase
+        MaxLength = 13
+        OnChange = edUserMsgChange
+        OnKeyPress = edUserMsg4KeyPress
+        TabOrder = 11
+      end
+      object edUserMsg6: TEdit
+        Left = 385
+        Height = 22
+        Top = 173
+        Width = 144
+        CharCase = ecUppercase
+        MaxLength = 13
+        OnChange = edUserMsgChange
+        OnKeyPress = edUserMsg4KeyPress
+        TabOrder = 12
+      end
+      object edUserMsg7: TEdit
+        Left = 385
+        Height = 22
+        Top = 205
+        Width = 144
+        CharCase = ecUppercase
+        MaxLength = 13
+        OnChange = edUserMsgChange
+        OnKeyPress = edUserMsg4KeyPress
+        TabOrder = 13
+      end
+      object edUserMsg8: TEdit
+        Left = 385
+        Height = 22
+        Top = 240
+        Width = 144
+        CharCase = ecUppercase
+        MaxLength = 13
+        OnChange = edUserMsgChange
+        OnKeyPress = edUserMsg4KeyPress
+        TabOrder = 14
+      end
+      object edUserMsg9: TEdit
+        Left = 385
+        Height = 22
+        Top = 273
+        Width = 144
+        CharCase = ecUppercase
+        MaxLength = 13
+        OnChange = edUserMsgChange
+        OnKeyPress = edUserMsg4KeyPress
+        TabOrder = 15
+      end
+      object edUserMsg10: TEdit
+        Left = 386
+        Height = 22
+        Top = 306
+        Width = 144
+        CharCase = ecUppercase
+        MaxLength = 13
+        OnChange = edUserMsgChange
+        OnKeyPress = edUserMsg4KeyPress
+        TabOrder = 16
+      end
+      object edUserMsg11: TEdit
+        Left = 586
+        Height = 22
+        Top = 26
+        Width = 144
+        CharCase = ecUppercase
+        MaxLength = 13
+        OnChange = edUserMsgChange
+        OnKeyPress = edUserMsg4KeyPress
+        TabOrder = 17
+      end
+      object edUserMsg12: TEdit
+        Left = 586
+        Height = 22
+        Top = 54
+        Width = 144
+        CharCase = ecUppercase
+        MaxLength = 13
+        OnChange = edUserMsgChange
+        OnKeyPress = edUserMsg4KeyPress
+        TabOrder = 18
+      end
+      object edUserMsg13: TEdit
+        Left = 586
+        Height = 22
+        Top = 81
+        Width = 144
+        CharCase = ecUppercase
+        MaxLength = 13
+        OnChange = edUserMsgChange
+        OnKeyPress = edUserMsg4KeyPress
+        TabOrder = 19
+      end
+      object edUserQRG5: TEdit
+        Left = 171
+        Height = 22
+        Top = 153
+        Width = 64
+        OnKeyPress = edUserQRG13KeyPress
+        TabOrder = 4
+        Text = '10137'
+      end
+      object edUserQRG6: TEdit
+        Left = 171
+        Height = 22
+        Top = 181
+        Width = 64
+        OnKeyPress = edUserQRG13KeyPress
+        TabOrder = 5
+        Text = '7036'
+      end
+      object edUserQRG7: TEdit
+        Left = 171
+        Height = 22
+        Top = 212
+        Width = 64
+        OnKeyPress = edUserQRG13KeyPress
+        TabOrder = 6
+        Text = '0'
+      end
+      object edUserQRG8: TEdit
+        Left = 171
+        Height = 22
+        Top = 242
+        Width = 64
+        OnKeyPress = edUserQRG13KeyPress
+        TabOrder = 7
+        Text = '0'
+      end
+      object edUserQRG9: TEdit
+        Left = 171
+        Height = 22
+        Top = 273
+        Width = 64
+        OnKeyPress = edUserQRG13KeyPress
+        TabOrder = 8
+        Text = '0'
+      end
+      object Label74: TLabel
+        Left = 132
+        Height = 15
+        Top = 212
+        Width = 20
+        Caption = '17 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object edUserQRG10: TEdit
+        Left = 171
+        Height = 22
+        Top = 302
+        Width = 64
+        OnKeyPress = edUserQRG13KeyPress
+        TabOrder = 9
+        Text = '0'
+      end
+      object Label75: TLabel
+        Left = 133
+        Height = 15
+        Top = 242
+        Width = 20
+        Caption = '18 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label76: TLabel
+        Left = 132
+        Height = 15
+        Top = 273
+        Width = 20
+        Caption = '19 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label77: TLabel
+        Left = 133
+        Height = 15
+        Top = 302
+        Width = 20
+        Caption = '20 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object edUserMsg14: TEdit
+        Left = 586
+        Height = 22
+        Top = 107
+        Width = 144
+        CharCase = ecUppercase
+        MaxLength = 13
+        OnChange = edUserMsgChange
+        OnKeyPress = edUserMsg4KeyPress
+        TabOrder = 20
+      end
+      object Label126: TLabel
+        Left = 564
+        Height = 15
+        Top = 109
+        Width = 20
+        Caption = '14 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object edUserMsg15: TEdit
+        Left = 586
+        Height = 22
+        Top = 141
+        Width = 144
+        CharCase = ecUppercase
+        MaxLength = 13
+        OnChange = edUserMsgChange
+        OnKeyPress = edUserMsg4KeyPress
+        TabOrder = 21
+      end
+      object Label127: TLabel
+        Left = 564
+        Height = 15
+        Top = 143
+        Width = 20
+        Caption = '15 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object edUserMsg16: TEdit
+        Left = 586
+        Height = 22
+        Top = 173
+        Width = 144
+        CharCase = ecUppercase
+        MaxLength = 13
+        OnChange = edUserMsgChange
+        OnKeyPress = edUserMsg4KeyPress
+        TabOrder = 22
+      end
+      object Label128: TLabel
+        Left = 564
+        Height = 15
+        Top = 175
+        Width = 20
+        Caption = '16 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object edUserMsg17: TEdit
+        Left = 586
+        Height = 22
+        Top = 205
+        Width = 144
+        CharCase = ecUppercase
+        MaxLength = 13
+        OnChange = edUserMsgChange
+        OnKeyPress = edUserMsg4KeyPress
+        TabOrder = 23
+      end
+      object Label129: TLabel
+        Left = 564
+        Height = 15
+        Top = 207
+        Width = 20
+        Caption = '17 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object edUserMsg18: TEdit
+        Left = 586
+        Height = 22
+        Top = 240
+        Width = 144
+        CharCase = ecUppercase
+        MaxLength = 13
+        OnChange = edUserMsgChange
+        OnKeyPress = edUserMsg4KeyPress
+        TabOrder = 24
+      end
+      object Label130: TLabel
+        Left = 564
+        Height = 15
+        Top = 239
+        Width = 20
+        Caption = '18 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object edUserMsg19: TEdit
+        Left = 586
+        Height = 22
+        Top = 270
+        Width = 144
+        CharCase = ecUppercase
+        MaxLength = 13
+        OnChange = edUserMsgChange
+        OnKeyPress = edUserMsg4KeyPress
+        TabOrder = 25
+      end
+      object Label131: TLabel
+        Left = 564
+        Height = 15
+        Top = 272
+        Width = 20
+        Caption = '19 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object edUserMsg20: TEdit
+        Left = 586
+        Height = 22
+        Top = 304
+        Width = 144
+        CharCase = ecUppercase
+        MaxLength = 13
+        OnChange = edUserMsgChange
+        OnKeyPress = edUserMsg4KeyPress
+        TabOrder = 26
+      end
+      object Label132: TLabel
+        Left = 564
+        Height = 15
+        Top = 306
+        Width = 20
+        Caption = '20 -'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label65: TLabel
+        Left = 12
+        Height = 15
+        Top = 273
+        Width = 70
+        Caption = '9 - 24920 KHz'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label67: TLabel
+        Left = 12
+        Height = 15
+        Top = 302
+        Width = 76
+        Caption = '10 - 28076 KHz'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label79: TLabel
+        Left = 12
+        Height = 15
+        Top = 242
+        Width = 70
+        Caption = '8 - 21076 KHz'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+    object TabSheet6: TTabSheet
+      Caption = 'Colors'
+      ClientHeight = 461
+      ClientWidth = 776
+      object Label78: TLabel
+        Left = 12
+        Height = 99
+        Top = 233
+        Width = 515
+        Caption = 'JT65-HF uses color coding to assist in picking out receptions that may be of greater interest.'#13#10#13#10'Messages evaluated as being a CQ will be displayed as in the example for CQ TEXT.'#13#10#13#10'Messages evaluated as being to your callsign  will be displayed as in the example for HAS MY CALL.'#13#10#13#10'Messages evaluated as being neither of the above  will be displayed as in the example for ONGOING QSO.'
+        Font.Height = -11
+        Font.Name = 'Arial'
+        ParentColor = False
+        ParentFont = False
+        Visible = False
+      end
+      object Edit1: TEdit
+        Left = 12
+        Height = 24
+        Top = 17
+        Width = 168
+        Alignment = taCenter
+        CharCase = ecUppercase
+        Color = clLime
+        Font.Height = -13
+        Font.Name = 'Courier New'
+        Font.Style = [fsBold]
+        ParentFont = False
+        ReadOnly = True
+        TabStop = False
+        TabOrder = 3
+        Text = 'CQ TEXT'
+      end
+      object ComboBox1: TComboBox
+        Left = 188
+        Height = 24
+        Top = 17
+        Width = 137
+        Color = clLime
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ItemHeight = 16
+        ItemIndex = 8
+        Items.Strings = (
+          'Green'
+          'Olive'
+          'Sky Blue'
+          'Purple'
+          'Teal'
+          'Gray'
+          'Silver'
+          'Red'
+          'Lime'
+          'Yellow'
+          'Light Green'
+          'Fuchsia'
+          'Aqua'
+          'Cream'
+          'Medium Gray'
+          'White'
+        )
+        OnChange = ComboBox1Change
+        ParentFont = False
+        Style = csDropDownList
+        TabOrder = 0
+        Text = 'Lime'
+      end
+      object Edit2: TEdit
+        Left = 12
+        Height = 24
+        Top = 45
+        Width = 168
+        Alignment = taCenter
+        CharCase = ecUppercase
+        Color = clFuchsia
+        Font.Height = -13
+        Font.Name = 'Courier New'
+        Font.Style = [fsBold]
+        ParentFont = False
+        ReadOnly = True
+        TabStop = False
+        TabOrder = 4
+        Text = 'HAS MY CALL'
+      end
+      object ComboBox2: TComboBox
+        Left = 188
+        Height = 24
+        Top = 45
+        Width = 137
+        Color = clFuchsia
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ItemHeight = 16
+        ItemIndex = 11
+        Items.Strings = (
+          'Green'
+          'Olive'
+          'Sky Blue'
+          'Purple'
+          'Teal'
+          'Gray'
+          'Silver'
+          'Red'
+          'Lime'
+          'Yellow'
+          'Light Green'
+          'Fuchsia'
+          'Aqua'
+          'Cream'
+          'Medium Gray'
+          'White'
+        )
+        OnChange = ComboBox2Change
+        ParentFont = False
+        Style = csDropDownList
+        TabOrder = 1
+        Text = 'Fuchsia'
+      end
+      object Edit3: TEdit
+        Left = 12
+        Height = 24
+        Top = 73
+        Width = 168
+        Alignment = taCenter
+        CharCase = ecUppercase
+        Color = clSilver
+        Font.Height = -13
+        Font.Name = 'Courier New'
+        Font.Style = [fsBold]
+        ParentFont = False
+        ReadOnly = True
+        TabStop = False
+        TabOrder = 5
+        Text = 'ONGOING QSO'
+      end
+      object ComboBox3: TComboBox
+        Left = 188
+        Height = 24
+        Top = 73
+        Width = 137
+        Color = clSilver
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ItemHeight = 16
+        ItemIndex = 6
+        Items.Strings = (
+          'Green'
+          'Olive'
+          'Sky Blue'
+          'Purple'
+          'Teal'
+          'Gray'
+          'Silver'
+          'Red'
+          'Lime'
+          'Yellow'
+          'Light Green'
+          'Fuchsia'
+          'Aqua'
+          'Cream'
+          'Medium Gray'
+          'White'
+        )
+        OnChange = ComboBox3Change
+        ParentFont = False
+        Style = csDropDownList
+        TabOrder = 2
+        Text = 'Silver'
+      end
+    end
+    object TabSheet7: TTabSheet
+      Caption = 'Diagnostics'
+      ClientHeight = 461
+      ClientWidth = 776
+      OnContextPopup = TabSheet7ContextPopup
+      object lbDiagLog: TListBox
+        Left = 4
+        Height = 324
+        Top = 5
+        Width = 768
+        Font.Height = -13
+        Font.Name = 'Arial'
+        ItemHeight = 0
+        ParentFont = False
+        TabOrder = 3
+        TabStop = False
+      end
+      object chkNoOptFFT: TCheckBox
+        Left = 4
+        Height = 19
+        Top = 409
+        Width = 530
+        Caption = 'Disable Optimal FFT use.  (DO NOT CHECK THIS BOX UNLESS INSTRUCTED TO BY TECHNICAL SUPPORT)'
+        TabOrder = 2
+        TabStop = False
+      end
+      object btnClearLog: TButton
+        Left = 697
+        Height = 25
+        Hint = 'Remove all lines from debug log above'
+        Top = 337
+        Width = 75
+        Caption = 'Clear Log'
+        OnClick = btnClearLogClick
+        TabOrder = 5
+      end
+      object CheckBox1: TCheckBox
+        Left = 700
+        Height = 19
+        Top = 425
+        Width = 68
+        AutoSize = False
+        Caption = 'Thousands mark is . and decimal mark is ,  (DO NOT CHECK THIS BOX UNLESS INSTRUCTED TO BY TECHNICAL SUPPORT)'
+        OnChange = CheckBox1Change
+        TabOrder = 0
+        Visible = False
+      end
+      object CheckBox2: TCheckBox
+        Left = 708
+        Height = 19
+        Top = 441
+        Width = 60
+        AutoSize = False
+        Caption = 'Thousands mark is , and decimal mark is .  (DO NOT CHECK THIS BOX UNLESS INSTRUCTED TO BY TECHNICAL SUPPORT)'
+        OnChange = CheckBox2Change
+        TabOrder = 1
+        Visible = False
+      end
+      object cbCheckForUpdates: TCheckBox
+        Left = 4
+        Height = 19
+        Hint = 'Will be checking for updates on every program start.'#13#10'Detects updates of major and alpha versions.'
+        Top = 433
+        Width = 158
+        Caption = 'Check for updates at startup'
+        Checked = True
+        OnChange = CheckBox3Change
+        State = cbChecked
+        TabOrder = 4
+      end
+      object CheckNow: TButton
+        Left = 188
+        Height = 21
+        Hint = 'Check for updates now'
+        Top = 433
+        Width = 64
+        Caption = 'check now'
+        OnClick = CheckNowClick
+        TabOrder = 6
+      end
+      object GroupBox1: TGroupBox
+        Left = 3
+        Height = 40
+        Top = 369
+        Width = 769
+        Caption = 'Number Format'
+        ClientHeight = 22
+        ClientWidth = 765
+        TabOrder = 7
+        object rbDecSepEU: TRadioButton
+          Left = 6
+          Height = 19
+          Hint = 'Should be right by default as it''s being detected on program startup.'#13#10'Only change in case of serious issues and in case the support has asked you to.'
+          Top = 0
+          Width = 366
+          Caption = 'Decimal separator is , (3,14) and thousands separator is . (1.000.000 €)'
+          OnChange = rbDecSepEUChange
+          OnClick = rbDecSepEUClick
+          TabOrder = 0
+        end
+        object rbDecSepUS: TRadioButton
+          Left = 391
+          Height = 19
+          Hint = 'Should be right by default as it''s being detected on program startup.'#13#10'Only change in case of serious issues and in case the support has asked you to.'
+          Top = 0
+          Width = 366
+          Caption = 'Decimal separator is . (3.14) and thousands separator is , (1,000,000 $)'
+          OnChange = rbDecSepUSChange
+          OnClick = rbDecSepUSClick
+          TabOrder = 1
+        end
+      end
+      object GroupBox2: TGroupBox
+        Left = 3
+        Height = 40
+        Top = 329
+        Width = 184
+        Caption = 'Distance Units'
+        ClientHeight = 22
+        ClientWidth = 180
+        TabOrder = 8
+        object rbKM: TRadioButton
+          Left = 6
+          Height = 19
+          Hint = 'Should be right by default as it''s being detected on program startup.'#13#10'Only change in case of serious issues and in case the support has asked you to.'
+          Top = 0
+          Width = 92
+          Caption = 'kilometers (km)'
+          TabOrder = 0
+        end
+        object rbMiles: TRadioButton
+          Left = 110
+          Height = 19
+          Hint = 'Should be right by default as it''s being detected on program startup.'#13#10'Only change in case of serious issues and in case the support has asked you to.'
+          Top = 0
+          Width = 65
+          Caption = 'miles (mi)'
+          TabOrder = 1
+        end
+      end
+      object cbSendStats: TCheckBox
+        Left = 284
+        Height = 19
+        Hint = 'Help me find out who is using which version of Comfort so I can offer the best support!'#13#10'Only contains callsign and the version used, nothing else.'
+        Top = 433
+        Width = 105
+        Caption = 'Send usage stats'
+        OnChange = cbSendStatsChange
+        TabOrder = 9
+      end
+      object cbShowUsageAdvices: TCheckBox
+        Left = 412
+        Height = 19
+        Top = 433
+        Width = 123
+        Caption = 'Show usage advices'
+        TabOrder = 10
+      end
+    end
+  end
+  object Button1: TButton
+    Left = 8
+    Height = 25
+    Top = 504
+    Width = 784
+    Caption = 'Save Settings and Close Window'
+    Default = True
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 1
+  end
+end

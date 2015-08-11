@@ -1,0 +1,23 @@
+object Form9: TForm9
+  Left = 345
+  Height = 208
+  Top = 226
+  Width = 395
+  Align = alRight
+  Anchors = [akTop, akLeft, akRight, akBottom]
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Did you know?'
+  ClientHeight = 208
+  ClientWidth = 395
+  DockSite = True
+  OnCreate = FormCreate
+  LCLVersion = '1.0.10.0'
+  object TIMemo1: TTIMemo
+    Left = 0
+    Height = 207
+    Top = 0
+    Width = 396
+    ScrollBars = ssAutoVertical
+  end
+end

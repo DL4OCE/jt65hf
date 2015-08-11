@@ -1,0 +1,57 @@
+object Form4: TForm4
+  Left = 10
+  Height = 300
+  Top = 24
+  Width = 400
+  BorderIcons = [biSystemMenu]
+  Caption = 'About JT65-HF'
+  ClientHeight = 300
+  ClientWidth = 400
+  Constraints.MaxHeight = 300
+  Constraints.MaxWidth = 400
+  Constraints.MinHeight = 300
+  Constraints.MinWidth = 400
+  LCLVersion = '0.9.30'
+  object Memo1: TMemo
+    Left = 8
+    Height = 280
+    Top = 8
+    Width = 384
+    Font.Height = -13
+    Font.Name = 'arial [monotype]'
+    Lines.Strings = (
+      'JT65-HF (c)2008...2011 Joe Large W6CQZ'
+      ''
+      'JT65-HF is an implementation of the JT65 protocol'
+      'with an emphasis upon its usage in the HF Amateur'
+      'Radio bands.'
+      ''
+      'The JT65 protocol is the creation of Joe Taylor - K1JT'
+      'and is documented at;'
+      ''
+      'http://physics.princeton.edu/pulsar/K1JT/JT65.pdf'
+      ''
+      'JT65-HF is open source software using technology'
+      'of original creation and algorithms from other open'
+      'source projects.'
+      ''
+      'Original code for JT65-HF is licensed under the GPL'
+      '2.0 license while other elements retain their original'
+      'copyright and license.'
+      ''
+      'JT65-HF sourcecode and binaries may be found at'
+      'its SourceForge page at;'
+      ''
+      'https://sourceforge.net/projects/jt65-hf/'
+      ''
+      'Support may be found at;'
+      ''
+      'http://groups.google.com/group/jt65-hf/'
+      ''
+      '73 - Joe - W6CQZ'
+    )
+    ParentFont = False
+    ScrollBars = ssAutoVertical
+    TabOrder = 0
+  end
+end

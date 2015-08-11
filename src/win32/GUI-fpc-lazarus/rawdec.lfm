@@ -1,0 +1,53 @@
+object Form5: TForm5
+  Left = 0
+  Height = 375
+  Top = 133
+  Width = 675
+  BorderIcons = []
+  Caption = 'Transmit Log'
+  ClientHeight = 375
+  ClientWidth = 675
+  Constraints.MaxHeight = 375
+  Constraints.MaxWidth = 675
+  Constraints.MinHeight = 375
+  Constraints.MinWidth = 675
+  Font.Height = -13
+  Font.Name = 'Arial'
+  LCLVersion = '1.0.8.0'
+  object ListBox1: TListBox
+    Left = 0
+    Height = 336
+    Top = 0
+    Width = 672
+    Font.Height = -13
+    Font.Name = 'Courier New'
+    Font.Style = [fsBold]
+    ItemHeight = 0
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 8
+    Height = 25
+    Top = 344
+    Width = 75
+    Caption = 'Clear List'
+    Font.Height = -11
+    Font.Name = 'Arial'
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 568
+    Height = 25
+    Top = 344
+    Width = 104
+    Caption = 'Close Window'
+    Font.Height = -11
+    Font.Name = 'Arial'
+    OnClick = Button2Click
+    ParentFont = False
+    TabOrder = 2
+  end
+end

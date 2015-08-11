@@ -1,0 +1,259 @@
+object Form2: TForm2
+  Left = 390
+  Height = 250
+  Top = 226
+  Width = 385
+  BorderIcons = []
+  Caption = 'Log Contact'
+  ClientHeight = 250
+  ClientWidth = 385
+  Constraints.MaxHeight = 250
+  Constraints.MaxWidth = 385
+  Constraints.MinHeight = 250
+  Constraints.MinWidth = 385
+  Font.Height = -13
+  Font.Name = 'Arial'
+  OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  Position = poMainFormCenter
+  LCLVersion = '1.0.10.0'
+  object Label1: TLabel
+    Left = 136
+    Height = 17
+    Top = 52
+    Width = 61
+    Caption = 'Start Time'
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 8
+    Height = 17
+    Top = 52
+    Width = 28
+    Caption = 'Date'
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 272
+    Height = 17
+    Top = 52
+    Width = 56
+    Caption = 'End Time'
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 8
+    Height = 17
+    Top = 14
+    Width = 23
+    Caption = 'Call'
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 8
+    Height = 17
+    Top = 94
+    Width = 28
+    Caption = 'Sent'
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 96
+    Height = 17
+    Top = 94
+    Width = 53
+    Caption = 'Received'
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 216
+    Height = 17
+    Top = 94
+    Width = 37
+    Caption = 'Power'
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label8: TLabel
+    Left = 312
+    Height = 17
+    Top = 94
+    Width = 36
+    Caption = 'Watts'
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label9: TLabel
+    Left = 8
+    Height = 17
+    Top = 128
+    Width = 62
+    Caption = 'Frequency'
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 172
+    Height = 17
+    Top = 128
+    Width = 28
+    Caption = 'MHz'
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label11: TLabel
+    Left = 165
+    Height = 17
+    Top = 14
+    Width = 25
+    Caption = 'Grid'
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label12: TLabel
+    Left = 8
+    Height = 17
+    Top = 169
+    Width = 35
+    Caption = 'Notes'
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object edLogSTime: TEdit
+    Left = 203
+    Height = 24
+    Top = 46
+    Width = 45
+    TabOrder = 3
+  end
+  object edLogDate: TEdit
+    Left = 46
+    Height = 24
+    Top = 46
+    Width = 72
+    TabOrder = 2
+  end
+  object edLogETime: TEdit
+    Left = 333
+    Height = 24
+    Top = 46
+    Width = 45
+    TabOrder = 4
+  end
+  object edLogCall: TEdit
+    Left = 46
+    Height = 24
+    Top = 8
+    Width = 106
+    CharCase = ecUppercase
+    TabOrder = 0
+  end
+  object edLogSReport: TEdit
+    Left = 46
+    Height = 24
+    Top = 88
+    Width = 34
+    TabOrder = 5
+  end
+  object edLogRReport: TEdit
+    Left = 164
+    Height = 24
+    Top = 88
+    Width = 34
+    TabOrder = 6
+  end
+  object edLogPower: TEdit
+    Left = 266
+    Height = 24
+    Top = 88
+    Width = 38
+    TabOrder = 7
+  end
+  object edLogFrequency: TEdit
+    Left = 84
+    Height = 24
+    Top = 122
+    Width = 80
+    TabOrder = 8
+  end
+  object btnLogQSO: TButton
+    Left = 6
+    Height = 25
+    Top = 216
+    Width = 250
+    Caption = 'Log Contact And Close This Window'
+    Default = True
+    Font.Height = -13
+    Font.Name = 'Arial'
+    OnClick = btnLogQSOClick
+    ParentFont = False
+    TabOrder = 10
+  end
+  object edLogGrid: TEdit
+    Left = 201
+    Height = 24
+    Top = 8
+    Width = 63
+    CharCase = ecUppercase
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 301
+    Height = 25
+    Top = 216
+    Width = 75
+    Caption = 'Cancel'
+    Font.Height = -13
+    Font.Name = 'Arial'
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 11
+  end
+  object edLogComment: TEdit
+    Left = 56
+    Height = 24
+    Top = 162
+    Width = 320
+    TabOrder = 9
+  end
+  object CheckBox1: TCheckBox
+    Left = 6
+    Height = 20
+    Top = 192
+    Width = 196
+    Caption = 'Clear notes for each new QSO'
+    Checked = True
+    State = cbChecked
+    TabOrder = 12
+  end
+end
