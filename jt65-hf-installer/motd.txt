@@ -1,0 +1,16 @@
+6
+Shortcuts
+You can use a few shortcuts to let your mouse where it is while operating JT65:<crlf>[ESC] - stop transmission immediately and sets TX status to "TX OFF". Also works when not transmitting<crlf>[STRG+D] - delete all data in reception window<crlf>[STRG+R] - re-decode data in reception window<crlf>[ALT+D] - set values like dfTX, dfRX and so on to defaults<crlf>[ALT+S, C, R, T, I, A] - shortcuts to menu items Setup, Rig Control, Raw Decoder, ...<crlf>[ALT+G] - TX generated<crlf>[ALT+F] - TX free text<crlf>[ALT+N] - TX enable<crlf>[ALT+H] - TX halt<crlf>[ALT+E] - send during even minutes<crlf>[ALT+O] - send during odd minutes<crlf>[ALT+L] - log QSO
+Updates
+You can automatically let Comfort check for updates at every program start. This has been added in versions > build 4.0.0.212. Can be turned off.<crlf>Get the latest version at http://abcsolutions.de/jt65hf/ .
+Forum
+This software can only be improved with user's feedback. So please, take yourself the time to leave a comment on the forums.<crlf>http://jt65hfcomfort.iphpbb3.com/
+IARU band plans
+We're compliant to the IARU band plans since build 4.0.0.261. This means that QRG 3576 has been kicked from the list and replaced by 3586. Please respect the IARU band plans and use this frequency!
+Best audio level
+To get the best results in reception, you should set your audio level to somewhat around 0 during the seconds 50-59. This can be achieved by watching the audio input level indicator. You can either set the NF output level of your transceiver, the input gain of your PC's input or the audio gain of Comfort.
+Frequencies
+Advised QRGs are:<crlf>160 m: 1838, 1805 kHz<crlf>80 m: 3586 kHz<crlf>40 m: 7076 kHz<crlf>30 m: 10139, 10138, 10137 kHz<crlf>20 m: 14076, 14075, 14077, 14078 kHz<crlf>17 m: 18102, 18098 kHz<crlf>15 m: 21076 kHz<crlf>12 m: 24917, 24918 kHz<crlf>10 m: 28076 kHz<crlf>6 m: 50076, 50160, 50260, 50276, 50290 kHz<crlf>2 m: 144076, 144116, 144160, 144120 kHz
+Synchronize your clock
+Proper operation significantly depends on an accurately set clock. Please update it regularly. Best way to do this is to install an NTP client that updates your clock in intervals of 30 minutes or so.<crlf>I have successfully been using NetTime for years on several Windows systems: http://www.timesynctool.com/
+

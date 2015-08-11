@@ -1,0 +1,132 @@
+			Hystorie JT65-HF-Comfort
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~			
+Version 1:
+- Dateiname für Logdatei frei wählbar
+- als zusätzliches Logformat MixW2.log möglich
+- Logeinstellungen in einer eigenen Logsetupseite zusammengefasst
+- Halbautomatischer Logscan
+	- durch Doppelklicken ins RX-Fenster wird (rechtes) Call im Log gesucht
+	  - wenn gefunden, gibt es 2 Zustände:
+	    1. Call in Log 
+		2. QSO before
+		Diese Zustände werden durch farbliches Hinterlegen des Fensters
+		'TX to Callsign' angezeigt.
+		Im 'Logsetup' sind für diese Zustände Warnfarben einstellbar. Ebenso 
+		kann man auswählen, das bei einem Warnzustand nicht automatisch 
+		'TX Enable' freigegeben wird.
+- Im 'Logsetup' einstellbar, das bei 'Log QSO' 'TX enable' zurückgesetzt wird.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Version 2:
+- Vollautomatischer Logscan
+	- Im 'Logsetup' einstellbar, ob die Warnfarben den Zeilenhintergrund 
+	  einfärben sollen oder die Schrift
+	- Wegfall der Auswahl, das bei einem Warnzustand nicht automatisch 
+	  'TX Enable' freigegeben wird. Das ist nicht mehr notwendig, da man sofort
+	  den Call-Status sieht(und nicht erst nach Doppelklick ins RX-Fenster).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	  
+Version 2.1
+- kann (ohne Programmabstürze) mit verschiedenen Adif-Versionen umgehen.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Version 2.2
+- Abfangen von Fehleingaben im 'Logsetup' und Fehlermeldung im 'Rawdec'-Fenster
+  Dadurch aber manchmal Probleme mit Hauptprogramm
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+Version 2.3
+- Verbesserte Abfangroutine für Fehleingaben im 'Logsetup' und Fehlermeldung
+  in einem eigenen Fenster im 'Logsetup'. Damit sind die Probleme mit dem 
+  Hauptprogramm behoben.
+- Nach jedem Schließen des 'Logsetup'-Fensters wird ein neuer Logscan gemacht.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Version 2.4
+- diesselbe wie 2.3, aber nach dem Programmstart liegen alle zu zu öffnenden 
+  Unterfenster innerhalb des Programmfensters
+  Es gibt sonst Probleme mit kleinen Bildschirmen, das sonst z.B. das 
+  Setup-Fenster außerhalb des Bildschirms aufgegangen ist und sich die OM's
+  gewundert haben, das scheinbar kein Setup möglich ist.
+  Tritt nur bei kleinen Bildschirmen auf !
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+Version 3.0
+-Hat zusätzlich zu den Funktionen der Version 2.4 noch eine Ländersuche.
+-Es kann im RX-Fester (unter 'Q' = QSL-Status) nach folgendes angezeigt werden : 
+		W    Country worked
+		C    Country confirmed
+		CR    QSL received (vom aktuellen Call = Country confirmed)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Version 3.01
+Fehlerkorrigierte Version 3.0
+In den Versionen >= 2 ließ sich die Farbe für 'QSO before' nicht einstellen.
+Nach jeden Programmstart wurde mit der Default-Farbe 'Rot' gestartet.
+In der Version 3.01 behoben. 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Version 3.02
+-Optimierte Version 3.01
+ Beim ersten Programmstart wird unter 'Setup -> Diagnostics' der mittlere 
+ Eintrag 'Thousands mark is , and decimal mark is .' als Defaultwert gesetzt, 
+ damit die Frequenz als Dezimaltrennzeichen den Punkt hat, sonst funktioniert 
+ die  Ländersuche nicht !
+-Das 'R' vorm Rapport wird weggelassen.
+-Die Decoderoptimierung 'OPTFFT' schreibt das Optimierungsergebnis 'wisdom.dat'
+ jetzt in den versionsspezifischen Setup-Ordner.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Version 3.03
+Erweiterte und fehlerkorrigierte Version 3.02
+-Fuer Adif-Logfiles gibt es keine Bedingungen mehr, er muss nur Adif-konform
+ sein. Comfort-3.03 gibt das Logformat so aus, wie es vorgefunden wurde.
+-Unter 'Setup-Diagnostics' muss man nichts mehr selbst eintragen.
+-Das Logdateiformat 'adi' oder 'log' wird selbst erkannt.
+-Logdatensätze mit fehlerhaften Angaben bei Call / QRG werden ignoriert.
+-Das Ändern des Logfiles führt (wenn 'Receiving' ansteht) zum Löschen 
+ des RX-Fensters und einlesen des neuen Files.
+-Der ausgewählte Logfile wird in der Titelzeile angezeigt.
+-Die Callsuche läuft jetzt auch bei eigenen Rufzeichen in der RX-Zeile.
+-Die Pop-Up-Liste für 'DIAL QRG' wurde erweitert 
+ (wirksam, wenn keine Transceiver-Anbindung im 'RIG-Setup' ausgewählt wurde.)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Version 3.1
+-Logeinleseroutine fuer Adif noch fehlertoleranter
+-Callsuche liefert 4 Ergebnisse -> 4 Farben im Logsetup
+-Call in Log, Qso before, Call cfm current Band + Call cfm another Band
+ Landsuche liefert 4 Ergebnisse:
+ W = auf akt.Band gearbeitet, C = auf akt. Band bestaetigt
+ w = auf anderen Band gearbeitet, c = auf anderen Band bestaetigt
+-Ergebnise der Callsuche farbig, der Ländersuche per Buchstaben
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Version 3.2
+-Über dem Wasserfall ist eine Zeile für "Bookmarks", in dem die Calls, je nach
+ Ergebnis der Callsuche, als farbige Schrift dargestellt werden.
+ Die Hintergrundfarbe der Bookmarkzeile ist im 'Logsetup'einstellbar.
+-Macht Callsuche auch bei nicht "normgerechten" RX-Texten, z.B.: CQ DX AB1CDE
+-Statistik-Funktion integriert, über Reiter 'Statistic' im Hauptfenster oben
+ aufrufbar. Stellt in einer Tabelle Suchergebnisse mit Band+Status dar, 
+ z.B.: '20W' (auf 20M 'worked') oder '20C' (auf 20M 'confirmed').
+-Transmit-log ist als File ....\JT65hf-TxLog.csv (normale Textdatei) abspeicher-
+ bar, so hat man ein Sendelog.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Version 3.3
+Fehlerkorrigierte und erweiterte Version 3.2
+                      ### Fehlerkorrektur ###
+Statistik:
+-mehrfaches Erscheinen von Tabellenkopf und -text bei mehrfachen Aufrufen von Statistik   behoben
+-doppelter Eintrag des Prefix '1S' in pref.dat behoben
+
+Logsetup:
+-Auswahl 'Lineground..' und 'Letters..' jetzt korrekt möglich
+-Auswahl Bookmarkhintergrundfarbe jetzt wirksam, wenn Bookmarks neu geschrieben werden
+-Dial QRG Khz:
+ Frequenzauswahlliste bei PopUp-Menü für 17M korrigiert
+
+Sendelog:
+Das Sendelog wird im normalen Textformat gespeichert mit der Endung *.txt. Das ist am
+universellsten und man kann sich den File in jedes benötigte Format umformatieren.
+
+                     ###  Erweiterung  ###
+- Save Configuration erfolgt jetzt sofort beim Schließen des Setupfensters, nicht erst     beim Programm   schließen (war Originalzustand).
+- Häkchen bei 'No warning has my call' unterdrückt die "Warnfarben" für RX-Zeilen,
+  in dem das eigene Call vorhanden ist-> die  Zeile wird immer in der 
+  'Has my call'-Farbe dargestellt, EGAL welchen Status das Call der Gegenstation hat.
+  Ergibt nur Sinn, wenn 'Lineground coloured' ausgewählt ist und man eine Antwort auf      einen CQ-Ruf erhält.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+   
+Alle Versionen funktionieren nur korrekt ,wenn im 'DIAL QRG'-Fenster eine 
+Frequenz steht, die der Transceiver-Frequenz entspricht.
