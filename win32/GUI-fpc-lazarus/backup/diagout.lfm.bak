@@ -1,0 +1,82 @@
+object Form3: TForm3
+  Left = 974
+  Height = 535
+  Top = 382
+  Width = 730
+  BorderIcons = [biSystemMenu]
+  Caption = 'Program Messages'
+  ClientHeight = 535
+  ClientWidth = 730
+  Constraints.MaxHeight = 535
+  Constraints.MaxWidth = 730
+  Constraints.MinHeight = 535
+  Constraints.MinWidth = 730
+  Font.Height = -13
+  Font.Name = 'Arial'
+  LCLVersion = '1.0.10.0'
+  object ListBox1: TListBox
+    Left = 0
+    Height = 505
+    Top = 24
+    Width = 408
+    ItemHeight = 0
+    TabOrder = 0
+  end
+  object ListBox2: TListBox
+    Left = 408
+    Height = 313
+    Top = 24
+    Width = 321
+    ItemHeight = 0
+    TabOrder = 1
+  end
+  object ListBox3: TListBox
+    Left = 408
+    Height = 169
+    Top = 360
+    Width = 321
+    Font.Color = clRed
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ItemHeight = 0
+    ParentFont = False
+    TabOrder = 2
+  end
+  object Label1: TLabel
+    Left = 416
+    Height = 17
+    Top = 3
+    Width = 261
+    Caption = 'Bin, DF, Sync, Signal dB, DT, Check, Text'
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 8
+    Height = 17
+    Top = 3
+    Width = 129
+    Caption = 'General Information'
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 416
+    Height = 17
+    Top = 340
+    Width = 102
+    Caption = 'Errors/Warnings'
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+end

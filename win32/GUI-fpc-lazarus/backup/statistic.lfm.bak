@@ -1,0 +1,37 @@
+object Form7: TForm7
+  Left = 451
+  Height = 599
+  Top = 17
+  Width = 578
+  Caption = 'DXCC-Statistic'
+  ClientHeight = 599
+  ClientWidth = 578
+  OnClick = Button1Click
+  OnCreate = FormCreate
+  OnResize = FormResize
+  LCLVersion = '1.0.10.0'
+  object ListBox1: TListBox
+    Left = 0
+    Height = 572
+    Top = 27
+    Width = 578
+    Font.Height = -11
+    Font.Name = 'Courier New'
+    Font.Style = [fsBold]
+    ItemHeight = 0
+    ParentFont = False
+    TabOrder = 0
+  end
+  object ListBox2: TListBox
+    Left = 0
+    Height = 27
+    Top = 0
+    Width = 578
+    Font.Height = -13
+    Font.Name = 'Courier New'
+    Font.Style = [fsBold]
+    ItemHeight = 0
+    ParentFont = False
+    TabOrder = 1
+  end
+end
